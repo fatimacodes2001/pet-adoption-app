@@ -1,8 +1,7 @@
 /*global React ReactDOM*/
 
-
-import React from "react"
-import ReactDOM  from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 
 import { Component } from "react";
 
@@ -16,8 +15,9 @@ class Carousel extends Component {
   };
 
   handleIndexClick = (event) => {
+    console.log(event.target.dataset.index);
     this.setState({
-      active: +event.target.dataset.index,
+      active: event.target.dataset.index,
     });
   };
 
@@ -35,7 +35,7 @@ class Carousel extends Component {
               src={photo}
               onClick={this.handleIndexClick}
               data-index={index}
-              className={index === active ? "active" : ""}
+              className={index == active ? "active" : ""}
               alt="animal thumbnail"
             />
           ))}

@@ -34727,8 +34727,10 @@ function (_Component) {
     });
 
     _defineProperty(_assertThisInitialized(_this), "handleIndexClick", function (event) {
+      console.log(event.target.dataset.index);
+
       _this.setState({
-        active: +event.target.dataset.index
+        active: event.target.dataset.index
       });
     });
 
@@ -34764,7 +34766,7 @@ function (_Component) {
               src: photo,
               onClick: _this2.handleIndexClick,
               "data-index": index,
-              className: index === active ? "active" : "",
+              className: index == active ? "active" : "",
               alt: "animal thumbnail"
             })
           );
@@ -35616,7 +35618,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64591" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61956" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
